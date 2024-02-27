@@ -16,19 +16,26 @@ public class Product {
     }
 
     public void calculate() {
-        int A = Integer.parseInt(
-                JOptionPane.showInputDialog(
-                        "First term: "
-                )
-        );
-        int B = Integer.parseInt(
-                JOptionPane.showInputDialog(
-                        "Second term: "
-                )
-        );
-
+        while(true) {
+            int A = Integer.parseInt(
+                    JOptionPane.showInputDialog(
+                            "First term: "
+                    )
+            );
+            int B = Integer.parseInt(
+                    JOptionPane.showInputDialog(
+                            "Second term: "
+                    )
+            );
+            if(A!=0 && B!=0) {
+                JOptionPane.showMessageDialog(
+                        null, A + " + " + B + " = " + recursion(A, B)
+                );
+                break;
+            }
+        }
         JOptionPane.showMessageDialog(
-                null, A + " + " + B + " = " + recursion(A, B)
+                null, "Enter valid numbers."
         );
     }
 }
