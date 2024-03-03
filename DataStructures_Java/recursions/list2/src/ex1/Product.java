@@ -29,7 +29,7 @@ public class Product {
             );
             if(A!=0 && B!=0) {
                 JOptionPane.showMessageDialog(
-                        null, A + " + " + B + " = " + recursion(A, B)
+                        null, A + " * " + B + " = " + recursion(A, B)
                 );
                 break;
             }

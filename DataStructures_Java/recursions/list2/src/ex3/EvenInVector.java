@@ -37,7 +37,7 @@ public class EvenInVector {
             while(true) {
                 int input = Integer.parseInt(
                         JOptionPane.showInputDialog(
-                                "Enter positive odd number (position  " + i + "):"
+                                "Enter positive integer number (position  " + i + "):"
                         )
                 );
                 if(input>0){

@@ -18,11 +18,11 @@ public class MDC {
                         "Enter first term: "
                 )
         );
-
         int B = Integer.parseInt(
                 JOptionPane.showInputDialog(
                         "Enter second term: "
                 )
         );
+
     }
 }
