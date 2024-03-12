@@ -1,4 +1,4 @@
-package main;
+package main_list2;
 
 
 import ex1.Product;
@@ -9,9 +9,9 @@ import ex5.MDC;
 
 import javax.swing.JOptionPane;
 
-public class Main {
+public class Main2 {
 
-  public Main() {
+  public Main2() {
     super();
   }
 
