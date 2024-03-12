@@ -5,6 +5,7 @@ import ex1.Product;
 import ex2.Division;
 import ex3.EvenInVector;
 import ex4.DoubleFactorial;
+import ex5.MDC;
 
 import javax.swing.JOptionPane;
 
@@ -28,7 +29,7 @@ public class Main {
                     5 - Find the GCD of two numbers
                                 
                     9 - Exit
-                    """
+            """
     );
 
     return Integer.parseInt(JOptionPane.showInputDialog(menu_string));
@@ -39,26 +40,31 @@ public class Main {
     Division division = new Division();
     EvenInVector evenInVector = new EvenInVector();
     DoubleFactorial doubleFactorial = new DoubleFactorial();
+    MDC mdc = new MDC();
 
     while_loop: while(true) {
-      switch_statement: switch (userMenu()) {
+      switch (userMenu()) {
         case 1:
           product.calculate();
-          break switch_statement;
+          break;
         case 2:
           division.calculate();
-          break switch_statement;
+          break;
         case 3:
           evenInVector.calculate();
-          break switch_statement;
+          break;
         case 4:
           doubleFactorial.calculate();
-          break switch_statement;
+          break;
+        case 5:
+          mdc.calculate();
+          break;
         case 9:
-          break switch_statement;
+          break while_loop;
         default:
           JOptionPane.showMessageDialog(null, "Enter a valid number");
       }
     }
+    System.out.println("Done");
   }
 }
