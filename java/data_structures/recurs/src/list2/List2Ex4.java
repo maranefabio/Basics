@@ -2,9 +2,9 @@ package list2;
 
 import javax.swing.*;
 
-public class ex4DoubleFactorial {
+public class List2Ex4 {
 
-    public ex4DoubleFactorial() {
+    public List2Ex4() {
         super();
     }
 

@@ -1,8 +1,8 @@
 package list1;
 
 import javax.swing.JOptionPane;
-public class ex1SumFirstN {
-    public ex1SumFirstN(){
+public class List1Ex1 {
+    public List1Ex1(){
         super();
     }
 
@@ -32,3 +32,4 @@ public class ex1SumFirstN {
         }
     }
 }
+

@@ -2,9 +2,9 @@ package list2;
 
 import javax.swing.JOptionPane;
 
-public class ex1Product {
+public class List2Ex1 {
 
-    public ex1Product() {
+    public List2Ex1() {
         super();
     }
 

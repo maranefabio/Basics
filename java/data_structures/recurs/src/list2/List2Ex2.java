@@ -2,8 +2,8 @@ package list2;
 
 import javax.swing.JOptionPane;
 
-public class ex2Division {
-    public ex2Division() {
+public class List2Ex2 {
+    public List2Ex2() {
         super();
     }
 

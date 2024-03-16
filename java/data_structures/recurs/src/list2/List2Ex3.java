@@ -2,9 +2,9 @@ package list2;
 
 import javax.swing.JOptionPane;
 
-public class ex3EvenInVector {
+public class List2Ex3 {
 
-    public ex3EvenInVector() {
+    public List2Ex3() {
         super();
     }
 

@@ -2,9 +2,9 @@ package list2;
 
 import javax.swing.JOptionPane;
 
-public class ex5GCD {
+public class List2Ex5 {
 
-    public ex5GCD() {
+    public List2Ex5() {
         super();
     }
 
