@@ -3,7 +3,7 @@ import list2.*;
 
 import javax.swing.JOptionPane;
 
-public class RecursionUserInterface {
+public class Main {
     public static String mainMenu =
             """
             ----------- Menu -----------
