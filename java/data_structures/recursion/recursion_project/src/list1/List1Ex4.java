@@ -1,30 +1,30 @@
 package list1;
 
-import java.util.Arrays;
 import javax.swing.JOptionPane;
-public class List1Ex2 {
-    public int recursion(int[] vect, int vect_size, int current_smallest_element) {
+import java.util.Arrays;
+
+public class List1Ex4 {
+    public int recursion(int[] vect, int vect_size) {
         int index = vect_size-1;
-        
+
         if(index < 0) {
-            return current_smallest_element;
+          return 0;
         }
 
-        if(vect[index] < current_smallest_element) {
-            return recursion(vect, vect_size-1, vect[index]);
+        if(vect[index] < 0) {
+            return recursion(vect, vect_size-1) + 1; 
         }
-
-        return recursion(vect, vect_size-1, current_smallest_element);
+        
+        return recursion(vect, vect_size-1);
     }
-    
+
     public void calculate() {
         int vect_size;
-        
+
         while(true) {
             try {
                 vect_size = Integer.parseInt(JOptionPane.showInputDialog("Enter the array size"));
-                
-                if(vect_size>0) {
+                if(vect_size > 0) {
                     break;
                 }
                 JOptionPane.showMessageDialog(null, "Enter a valid size");
@@ -33,7 +33,7 @@ public class List1Ex2 {
                 JOptionPane.showMessageDialog(null, "Enter a valid size");
             }
         }
-        
+
         int[] vect = new int[vect_size];
 
         for(int i=0; i<vect_size; i++) {
@@ -47,8 +47,7 @@ public class List1Ex2 {
                 }                
             }
         }
-   
-        int current_smallest_element = vect[vect_size-1];
-        JOptionPane.showMessageDialog(null, "Smallest element of " + Arrays.toString(vect) + " = " + recursion(vect, vect_size, current_smallest_element));
+        JOptionPane.showMessageDialog(null, Arrays.toString(vect) + " contains " + recursion(vect, vect_size) + " negative numbers");
     }
 }
+

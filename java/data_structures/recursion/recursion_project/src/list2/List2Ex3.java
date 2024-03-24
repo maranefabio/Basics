@@ -1,41 +1,52 @@
 package list2;
 
+import java.util.Arrays;
 import javax.swing.JOptionPane;
 
 public class List2Ex3 {
+    public int recursion(int[] vect, int vect_size) {
+        int index = vect_size-1;
 
-    public List2Ex3() {
-        super();
-    }
-
-    public int recursion(int n) {
-        if(n==1) {
-            return 1;
-        }
-        else if(n==2) {
-            return 2;
+        if(index < 0) {
+          return 0;
         }
 
-        return n * recursion(n-2);
+        if(vect[index] % 2 == 0) {
+            return recursion(vect, vect_size-1) + 1; 
+        }
+        
+        return recursion(vect, vect_size-1);
     }
 
     public void calculate() {
-        while(true) {
-            int n = Integer.parseInt(
-                    JOptionPane.showInputDialog(
-                            "Enter a positive integer: "
-                    )
-            );
+        int vect_size;
 
-            if(n>0){
-                JOptionPane.showMessageDialog(
-                        null, n + "!! = " + recursion(n)
-                );
-                break;
+        while(true) {
+            try {
+                vect_size = Integer.parseInt(JOptionPane.showInputDialog("Enter the array size"));
+                if(vect_size > 0) {
+                    break;
+                }
+                JOptionPane.showMessageDialog(null, "Enter a valid size");
             }
-            JOptionPane.showMessageDialog(
-                    null, "Only positive integers allowed. Enter again."
-            );
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null, "Enter a valid size");
+            }
         }
+
+        int[] vect = new int[vect_size];
+
+        for(int i=0; i<vect_size; i++) {
+            while(true) {
+                try {
+                    vect[i] = Integer.parseInt(JOptionPane.showInputDialog("Value for position " + i));
+                    break;
+                }
+                catch(Exception e) {
+                    JOptionPane.showMessageDialog(null, "Enter a valid element");
+                }                
+            }
+        }
+        JOptionPane.showMessageDialog(null, Arrays.toString(vect) + " contains " + recursion(vect, vect_size) + " even numbers");
     }
 }
