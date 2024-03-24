@@ -2,10 +2,6 @@ package list1;
 
 import javax.swing.JOptionPane;
 public class List1Ex1 {
-    public List1Ex1(){
-        super();
-    }
-
     public int recursion(int n){
         // Stop condition: the result persists when adding zero
         if(n==0){

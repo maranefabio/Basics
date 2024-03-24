@@ -20,6 +20,8 @@ public class Main {
             ----------- List 1-----------
             1 - Sum of the N first integers
             ---
+
+            0 - Return to main menu
             9 - Quit
             """;
 
@@ -38,7 +40,7 @@ public class Main {
             """;
 
     public static void showList1Menu(){
-        while_loop: while(true) {
+        list1_while_loop: while(true) {
             int input = Integer.parseInt(JOptionPane.showInputDialog(menuList1));
             switch (input) {
                 case 1: {
@@ -47,10 +49,10 @@ public class Main {
                 }
                 case 0: {
                     showStartMenu();
-                    break;
+                    break list1_while_loop;
                 }
                 case 9: {
-                    break while_loop;
+                    break list1_while_loop;
                 }
                 default: {
                     JOptionPane.showMessageDialog(null, "Enter a valid option");
@@ -59,7 +61,7 @@ public class Main {
         }
     }
     public static void showList2Menu(){
-        while_loop: while(true){
+        list2_while_loop: while(true){
             int input = Integer.parseInt(JOptionPane.showInputDialog(menuList2));
             switch(input){
                 case 1: {
@@ -89,10 +91,10 @@ public class Main {
                 }
                 case 0: {
                     showStartMenu();
-                    break;
+                    break list2_while_loop;
                 }
                 case 9: {
-                    break while_loop;
+                    break list2_while_loop;
                 }
                 default: {
                     JOptionPane.showMessageDialog(null, "Enter a valid option");
@@ -102,19 +104,19 @@ public class Main {
     }
 
     public static void showStartMenu(){
-        while_loop: while(true){
+        main_while_loop: while(true){
             int input = Integer.parseInt(JOptionPane.showInputDialog(mainMenu));
             switch (input){
                 case 1: {
                     showList1Menu();
-                    break;
+                    break main_while_loop;
                 }
                 case 2: {
                     showList2Menu();
-                    break;
+                    break main_while_loop;
                 }
                 case 9: {
-                    break while_loop;
+                    break main_while_loop;
                 }
                 default: {
                     JOptionPane.showMessageDialog(null, "Enter a valid option");
